@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+    <!-- 默认配置，如果没有指定则使用这个配置 -->
+    <default-config>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">
+            <![CDATA[jdbc:mysql://172.27.16.38:3306/algorithm?useSSL=false&allowPublicKeyRetrieval=true&autoReconnect=true&failOverReadOnly=false&serverTimezone=Asia/Shanghai]]>
+        </property>
+        <property name="user">algo</property>
+        <property name="password">algo*2019</property>
+        <property name="acquireIncrement">3</property><!-- 如果池中数据连接不够时一次增长多少个 -->
+        <property name="initialPoolSize">3</property>
+        <property name="minPoolSize">3</property>
+        <property name="maxPoolSize">20</property>
+        <property name="maxStatements">3</property><!-- 一次向数据库最多可以发多少个Sql指令 -->
+        <property name="idleConnectionTestPeriod">3600</property><!--每3600秒检查所有连接池中的空闲连接。Default: 0 -->
+        <property name="maxIdleTime ">60</property> <!-- seconds --><!-- default: 0 -->
+        <property name="testConnectionOnCheckin">true</property>
+        <property name="acquireRetryAttempts">10</property>
+        <property name="acquireRetryDelay">1000</property><!--两次连接中间隔时间，单位毫秒。Default: 1000 -->
+        <property name="breakAfterAcquireFailure">false</property>
+        <property name="checkoutTimeout">3000</property>
+    </default-config>
+</c3p0-config>
